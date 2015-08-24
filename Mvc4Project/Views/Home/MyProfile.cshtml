@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "MyProfile";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyProfile</title>
+</head>
+<body>
+    <div>
+        <h2>MyProfile</h2>
+@*<h3>Welcome @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - This is for Authorized user </h3>*@
+<h3>Welcome @ViewBag.UserName - This is for Authorized user </h3>
+<h1>User Profile</h1>
+        <div>
+                     <b>User Name:</b> @ViewBag.UserName<br />
+                    <b>Phone:</b> @ViewBag.Phone<br />
+                    <b>City:</b> @ViewBag.City<br />
+        </div>
+
+    </div>
+</body>
+</html>
